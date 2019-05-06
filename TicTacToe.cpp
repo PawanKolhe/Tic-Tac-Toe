@@ -99,16 +99,20 @@ void playGame(){
 	}while(result == -1);
 	
 	if(result == 1){
-		cout << endl << "Player " << player << " WINS! :D" << endl;
 		storeResult('W', player);
+		displayBoard();
+		cout << endl << "Player " << player << " WINS! :D" << endl;
+		
 		games_played++;
 		
 		cin.ignore();
 		cin.get();
 		menu();
 	}else{
-		cout << endl << "Its a DRAW! :\\" << endl;
 		storeResult('D', 0);
+		displayBoard();
+		cout << endl << "Its a DRAW! :\\" << endl;
+		
 		games_played++;
 		
 		cin.ignore();
